@@ -32,7 +32,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Input Forms"),
+        title: Row(
+          children: [
+            //NetworkImage("https://i.pinimg.com/736x/7a/0e/e1/7a0ee10240a467544945f3d95065e99a.jpg"),
+          ],
+        ),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(vertical: 50, horizontal: 50),

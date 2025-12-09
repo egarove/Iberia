@@ -78,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: double.infinity,
                   ),
                 onPressed: () => {
-                  Navigator.push(context, MaterialPageRoute(
+                  Navigator.pushReplacement(context, MaterialPageRoute( //replacement para no poder volver
                           builder: (context) => RegisterScreen(),
                   ),)
                 },
