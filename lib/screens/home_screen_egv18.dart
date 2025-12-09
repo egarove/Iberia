@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_examen_egv18/screens/listview_screen_egv18.dart';
 import 'package:flutter_examen_egv18/screens/register_screen_egv18.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
    
   const HomeScreen({Key? key}) : super(key: key);
-  
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

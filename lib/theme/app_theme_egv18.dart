@@ -30,8 +30,6 @@ class AppTheme {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             foregroundColor: primary,
-            //shape: CircleBorder(), //forma redondeada
-            fixedSize: Size(100, 100), //mas grande para que el circulo no se corte
           )
         ),
 
