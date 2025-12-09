@@ -33,6 +33,10 @@ class AppTheme {
           )
         ),
 
+        iconTheme: IconThemeData(
+          color: primary
+        ),
+
         inputDecorationTheme: InputDecorationTheme(
           floatingLabelStyle: TextStyle( color: primary ),
           enabledBorder: OutlineInputBorder( //por defecto

@@ -7,32 +7,6 @@ class ListViewScreen extends StatefulWidget {
   const ListViewScreen({Key? key}) : super(key: key);
 
 
-  void displayDialog(BuildContext context){
-    print("se ha pulsado");
-    showDialog(
-      barrierDismissible: false, // false -> al pulsar fuera del alert NO se cierra
-      context: context,
-      builder: (context){
-        return AlertDialog(
-          title: Text("Aviso"),
-          content: Column(
-            mainAxisSize: MainAxisSize.min, //para que el boton de alerta ocupe el minimo posible
-            children: [
-              Text("El sistema de reservas esta deshabilitado en estos momentos"),
-              SizedBox(height: 20),
-              //NetworkImage("logo_iberia")
-            ],
-          ),
-          actions: [
-            TextButton( //solo podemos salir del alert pulsando en el boton
-              onPressed: () => Navigator.pop(context),
-              child: Text("Aceptar"), 
-        )           
-          ],
-        );
-      }
-    );
-  }
 
   @override
   State<ListViewScreen> createState() => _ListViewScreenState();
@@ -51,20 +25,74 @@ class _ListViewScreenState extends State<ListViewScreen> {
           )
         ],
       ),
-      body: ListView.separated(
-        itemBuilder: (context, index) => ListTile(
-            leading: Icon(AppRoutes.MenuOptions[index].icon),
-            title: Text(AppRoutes.MenuOptions[index].name),
-            onTap: () {
-              final route = MaterialPageRoute(builder: (context) => HomeScreen(),);
-              // Navigator.pushReplacement(context, route); //push añade la flecha para poder volver atras
-              // Navigator.pushReplacement(context, route); //pushReplacement borra la flecha para poder volver atras
-              Navigator.pushNamed(context, AppRoutes.MenuOptions[index].route); //me permite usar solo el nombre de la ruta
-            },
-          ),
-        separatorBuilder: (context, index) => Divider(),
-        itemCount: AppRoutes.MenuOptions.length,
+      body: Container(
+        child: Column(
+          children: [
+            ElevatedButton(
+                child: SizedBox(
+                  child: Center(child: Text("RESERVAS")),
+                  width: double.infinity,
+                ),
+                onPressed: () {
+                  displayDialog(context);
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                  foregroundColor: const Color.fromARGB(255, 150, 18, 18), //color de texto/icono
+                  elevation: 10)
+              ),
+              ElevatedButton(
+                child: SizedBox(
+                  child: Center(child: Text("ORGANIZA TU VIAJE")),
+                  width: double.infinity,
+                ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => OrganizaViajesScreen(),
+                    ),);         
+                }
+              ),
+              ElevatedButton(
+                child: SizedBox(
+                  child: Center(child: Text("ESPACIOS CULTURALES")),
+                  width: double.infinity,
+                ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => EspaciosScreen(),
+                    ),);         
+                }
+              ),
+          ],
+        ),
       )
+    );
+  }
+  
+  void displayDialog(BuildContext context) {
+    print("se ha pulsado Reservas");
+    showDialog(
+      barrierDismissible: false, // false -> al pulsar fuera del alert NO se cierra
+      context: context,
+      builder: (context){
+        return AlertDialog(
+          title: Text("Aviso"),
+          content: Column(
+            mainAxisSize: MainAxisSize.min, //para que el boton de alerta ocupe el minimo posible
+            children: [
+              Text("El sistema de reservas esta deshabilitado en estos momentos"),
+              SizedBox(height: 20),
+              //imagen IBERIA
+            ],
+          ),
+          actions: [
+            TextButton( //solo podemos salir del alert pulsando en el boton
+              onPressed: () => Navigator.pop(context),
+              child: Text("Cerrar"), 
+        )           
+          ],
+        );
+      }
     );
   }
 }

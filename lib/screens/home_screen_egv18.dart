@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Center(
          child: Column(children: [
-          //NetworkImage("https://i.pinimg.com/736x/7a/0e/e1/7a0ee10240a467544945f3d95065e99a.jpg") 
+          Text('IBERIA'),
           Text("Hola, te damos la bienvenida a  Iberia"),
           Text("Inicia Sesion"),
           Container(

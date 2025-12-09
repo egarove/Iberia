@@ -9,23 +9,11 @@ class AppRoutes {
   //MenuOptions y MenuOption no pueden coincidir los nombres
   static final MenuOptions = <MenuOption>[
     MenuOption(
-      route: 'reservas',
+      route: 'home',
       icon: Icons.arrow_right_alt_rounded,
-      name: 'RESERVAS',
+      name: 'home',
       screen: HomeScreen()
     ),
-    MenuOption(
-      route: 'organiza',
-      icon: Icons.arrow_right_alt_rounded,
-      name: 'ORGANIZA TU VIAJE',
-      screen: OrganizaViajesScreen()
-    ),
-    MenuOption(
-      route: 'espacios',
-      icon: Icons.arrow_right_alt_rounded,
-      name: 'ESPACIOS CULTURALES',
-      screen: EspaciosScreen()
-    )
   ];
 
   static Map<String, Widget Function(BuildContext) > getAppRoutes(){

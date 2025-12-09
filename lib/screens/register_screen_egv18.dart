@@ -34,7 +34,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       appBar: AppBar(
         title: Row(
           children: [
-            //NetworkImage("https://i.pinimg.com/736x/7a/0e/e1/7a0ee10240a467544945f3d95065e99a.jpg"),
+            Text("IBERIA")
           ],
         ),
       ),
