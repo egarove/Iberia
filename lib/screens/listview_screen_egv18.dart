@@ -28,10 +28,12 @@ class _ListViewScreenState extends State<ListViewScreen> {
       body: Container(
         child: Column(
           children: [
-            ElevatedButton(
+            SizedBox(height: 40,),
+            ElevatedButton(              
                 child: SizedBox(
                   child: Center(child: Text("RESERVAS")),
                   width: double.infinity,
+                  height: 50,                  
                 ),
                 onPressed: () {
                   displayDialog(context);
@@ -41,27 +43,39 @@ class _ListViewScreenState extends State<ListViewScreen> {
                   foregroundColor: const Color.fromARGB(255, 150, 18, 18), //color de texto/icono
                   elevation: 10)
               ),
+              SizedBox(height: 30,),
               ElevatedButton(
                 child: SizedBox(
                   child: Center(child: Text("ORGANIZA TU VIAJE")),
                   width: double.infinity,
+                  height: 50,
                 ),
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(
                     builder: (context) => OrganizaViajesScreen(),
                     ),);         
-                }
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                  foregroundColor: const Color.fromARGB(255, 150, 18, 18), //color de texto/icono
+                  elevation: 10),
               ),
+              SizedBox(height: 30,),
               ElevatedButton(
                 child: SizedBox(
                   child: Center(child: Text("ESPACIOS CULTURALES")),
                   width: double.infinity,
+                  height: 50,
                 ),
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(
                     builder: (context) => EspaciosScreen(),
                     ),);         
-                }
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                  foregroundColor: const Color.fromARGB(255, 150, 18, 18), //color de texto/icono
+                  elevation: 10)
               ),
           ],
         ),
@@ -82,7 +96,7 @@ class _ListViewScreenState extends State<ListViewScreen> {
             children: [
               Text("El sistema de reservas esta deshabilitado en estos momentos"),
               SizedBox(height: 20),
-              //imagen IBERIA
+              Image(image: AssetImage("assets/logo_grande.png"), width: 250,),
             ],
           ),
           actions: [

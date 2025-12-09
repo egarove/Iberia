@@ -14,79 +14,103 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-         child: Column(children: [
-          Text('IBERIA'),
-          Text("Hola, te damos la bienvenida a  Iberia"),
-          Text("Inicia Sesion"),
-          Container(
-            child: Form(child: Column(
-              children: [
-                TextFormField(
-                  autofocus: true,
-                  decoration: InputDecoration(
-                    hintText: "Email o Número Iberia Club"
-                  ),            
-                ),
-                TextFormField(
-                  autofocus: true,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: "Contraseña"
-                  ),            
-                ),
-                ElevatedButton(
-                child: SizedBox(
-                  child: Center(child: Text("Iniciar Sesion")),
-                  width: double.infinity,
-                ),
-                onPressed: () => {},
-                ),
-                Text("¿Has olvidado tu contraseña?")
-              ],
-            )),
-          ),
-          ElevatedButton(
-            child: SizedBox(
-              child: Center(child: Row(
+      body: Container(
+        color: Colors.red,
+        child: Center(
+           child: Column(children: [
+            Image(image: AssetImage("assets/logo_grande.png"), width: 200),
+            Text("Hola, te damos la bienvenida a  Iberia", style: TextStyle(fontSize: 30, color: Colors.white),),
+            SizedBox(height: 50,),
+            Text("Inicia Sesion", style: TextStyle(color: Colors.white)),
+            Container(
+              color: Colors.white,
+              child: Form(child: Column(
                 children: [
-                  Text("Continuar como invitado"),
-                  Icon(Icons.arrow_right_rounded)
+                  SizedBox(height: 20,),
+                  TextFormField(
+                    autofocus: true,
+                    decoration: InputDecoration(
+                      hintText: "Email o Número Iberia Club"
+                    ),            
+                  ),
+                  SizedBox(height: 20,),
+                  TextFormField(
+                    autofocus: true,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: "Contraseña"
+                    ),            
+                  ),
+                  SizedBox(height: 20,),
+                  ElevatedButton(
+                  child: SizedBox(
+                    child: Center(child: Text("Iniciar Sesion")),
+                    width: double.infinity,
+                  ),
+                  onPressed: () => {},
+                  ),
+                  SizedBox(height:30,),
+                  Text("¿Has olvidado tu contraseña?"),
+                  SizedBox(height: 30,),
                 ],
               )),
-                width: double.infinity,
-              ),
-            onPressed: () => {
-              Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => ListViewScreen(),
-               ),)
-            },
-          ),
-          Container(
-            child: Form(child: Column(
-              children: [
-                Icon(Icons.supervised_user_circle),
-                Text("¿Quieres disfrutar de las ventajas de pertenecer a Iberia?"),
-                ElevatedButton(
+            ),
+            SizedBox(height: 20,),
+            Container(
+              child: ElevatedButton(
                 child: SizedBox(
                   child: Center(child: Row(
                     children: [
-                      Text("Registrate"),
+                      Text("Continuar como invitado"),
                       Icon(Icons.arrow_right_rounded)
                     ],
                   )),
-                    width: double.infinity,
+                    width: 200,
+                    height: 50,
                   ),
                 onPressed: () => {
-                  Navigator.pushReplacement(context, MaterialPageRoute( //replacement para no poder volver
-                          builder: (context) => RegisterScreen(),
-                  ),)
+                  Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => ListViewScreen(),
+                   ),)
                 },
               ),
-              ],
-            )),
-          )          
-         ],),
+            ),
+            SizedBox(height: 20,),
+            Container(
+              color: Colors.white,
+              child: Form(child: Column(
+                children: [
+                  Icon(Icons.supervised_user_circle),
+                  SizedBox(height: 20,),
+                  Text("¿Quieres disfrutar de las ventajas de pertenecer a Iberia?"),
+                  SizedBox(height: 20,),
+                  Center(
+                    child: ElevatedButton(
+                      style: ButtonStyle(),
+                    child: SizedBox(
+                      child: Center(child: Row(
+                        children: [
+                          Text("Registrate"),
+                          Icon(Icons.arrow_right_rounded)
+                        ],
+                      )                   
+                      ),
+                      width: 100,
+                        height: 50,
+                      ),                    
+                    onPressed: () => {
+                      Navigator.pushReplacement(context, MaterialPageRoute( //replacement para no poder volver
+                              builder: (context) => RegisterScreen(),
+                      ),)
+                    },
+                    ),
+                  ),
+                SizedBox(height: 20,),
+                ],
+              )),
+            )          
+           ],),
+        ),
       ),
     );
   }

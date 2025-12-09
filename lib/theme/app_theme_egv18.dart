@@ -29,8 +29,9 @@ class AppTheme {
 
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            foregroundColor: primary,
-          )
+                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                  foregroundColor: const Color.fromARGB(255, 150, 18, 18), //color de texto/icono
+                  elevation: 10)
         ),
 
         iconTheme: IconThemeData(
