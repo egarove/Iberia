@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class OrganizaViajesScreen extends StatelessWidget {
+
+
+  final double alturaCards = 175;
    
   const OrganizaViajesScreen({Key? key}) : super(key: key);
   
@@ -22,24 +25,30 @@ class OrganizaViajesScreen extends StatelessWidget {
                     Expanded(
                       child: Card(
                         elevation: 10,
-                        child: Column(
-                          children: [
-                            Icon(Icons.message, size: 50,),
-                            Text("Prensa Digital", style: TextStyle(fontSize: 20),),
-                            Text("Tus periódicos y revistas favoritas", style: TextStyle(fontSize: 15),)
-                          ],
+                        child: SizedBox(
+                          height: alturaCards,
+                          child: Column(
+                            children: [
+                              Icon(Icons.message, size: 50,),
+                              Text("Prensa Digital", style: TextStyle(fontSize: 20),),
+                              Text("Tus periódicos y revistas favoritas", style: TextStyle(fontSize: 15,),)
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     Expanded(
-                      child: Card(
-                        elevation: 10,
-                        child: Column(
-                          children: [
-                            Icon(Icons.messenger_outline_sharp,size: 50,),
-                            Text("IBot", style: TextStyle(fontSize: 20)),
-                            Text("Tu asistente virtual, ¿en que puedo ayudarte?", style: TextStyle(fontSize: 15))
-                          ],
+                      child: SizedBox(
+                        height: alturaCards,
+                        child: Card(
+                          elevation: 10,
+                          child: Column(
+                            children: [
+                              Icon(Icons.messenger_outline_sharp,size: 50,),
+                              Text("IBot", style: TextStyle(fontSize: 20)),
+                              Text("Tu asistente virtual, ¿en que puedo ayudarte?", style: TextStyle(fontSize: 15))
+                            ],
+                          ),
                         ),
                       ),
                     )
@@ -49,26 +58,32 @@ class OrganizaViajesScreen extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      child: Card(
-                        elevation: 10,
-                        child: Column(
-                          children: [
-                            Icon(Icons.hotel, size: 50,),
-                            Text("Hoteles", style: TextStyle(fontSize: 20),),
-                            Text("Encuentra la mejor opcion y descansa", style: TextStyle(fontSize: 15),)
-                          ],
+                      child: SizedBox(
+                        height: alturaCards,
+                        child: Card(
+                          elevation: 10,
+                          child: Column(
+                            children: [
+                              Icon(Icons.hotel, size: 50,),
+                              Text("Hoteles", style: TextStyle(fontSize: 20),),
+                              Text("Encuentra la mejor opcion y descansa", style: TextStyle(fontSize: 15),)
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     Expanded(
-                      child: Card(
-                        elevation: 10,
-                        child: Column(
-                          children: [
-                            Icon(Icons.car_crash, size: 50,),
-                            Text("Coches", style: TextStyle(fontSize: 20),),
-                            Text("Desplazate con total libertad", style: TextStyle(fontSize: 15),)
-                          ],
+                      child: SizedBox(
+                        height: alturaCards,
+                        child: Card(
+                          elevation: 10,
+                          child: Column(
+                            children: [
+                              Icon(Icons.car_crash, size: 50,),
+                              Text("Coches", style: TextStyle(fontSize: 20),),
+                              Text("Desplazate con total libertad", style: TextStyle(fontSize: 15),)
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -77,32 +92,38 @@ class OrganizaViajesScreen extends StatelessWidget {
                     Row(
                   children: [
                     Expanded(
-                      child: Card(
-                        elevation: 10,
-                        child: Column(
-                          children: [
-                            Icon(Icons.card_membership_outlined, size: 50,),
-                            Text("Tarjetas de embarque", style: TextStyle(fontSize: 20),),
-                            Text("Todas tus tarjetas en un solo lugar", style: TextStyle(fontSize: 15),)
-                          ],
+                      child: SizedBox(
+                        height: alturaCards,
+                        child: Card(
+                          elevation: 10,
+                          child: Column(
+                            children: [
+                              Icon(Icons.card_membership_outlined, size: 50,),
+                              Text("Tarjetas de embarque", style: TextStyle(fontSize: 20),),
+                              Text("Todas tus tarjetas en un solo lugar", style: TextStyle(fontSize: 15),)
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     Expanded(
-                      child: Card(
-                        elevation: 10,
-                        child: Column(
-                          children: [
-                            Icon(Icons.request_page_sharp, size: 50,),
-                            Text("BoB", style: TextStyle(fontSize: 20),),
-                            Text("Recogida de equipaje a domicilio", style: TextStyle(fontSize: 15),)
-                          ],
+                      child: SizedBox(
+                        height: alturaCards,
+                        child: Card(
+                          elevation: 10,
+                          child: Column(
+                            children: [
+                              Icon(Icons.request_page_sharp, size: 50,),
+                              Text("BoB", style: TextStyle(fontSize: 20),),
+                              Text("Recogida de equipaje a domicilio", style: TextStyle(fontSize: 15),)
+                            ],
+                          ),
                         ),
                       ),
                     )
                   ],
                 )
-                  ],          
+                  ],         
               
              ),
            ),
