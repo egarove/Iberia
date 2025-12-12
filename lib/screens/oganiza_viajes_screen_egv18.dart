@@ -24,9 +24,9 @@ class OrganizaViajesScreen extends StatelessWidget {
                         elevation: 10,
                         child: Column(
                           children: [
-                            Icon(Icons.message),
-                            Text("Prensa Digital"),
-                            Text("Tus periódicos y revistas favoritas")
+                            Icon(Icons.message, size: 50,),
+                            Text("Prensa Digital", style: TextStyle(fontSize: 20),),
+                            Text("Tus periódicos y revistas favoritas", style: TextStyle(fontSize: 15),)
                           ],
                         ),
                       ),
@@ -36,15 +36,16 @@ class OrganizaViajesScreen extends StatelessWidget {
                         elevation: 10,
                         child: Column(
                           children: [
-                            Icon(Icons.messenger_outline_sharp),
-                            Text("IBot"),
-                            Text("Tu asistente virtual, ¿en que puedo ayudarte?")
+                            Icon(Icons.messenger_outline_sharp,size: 50,),
+                            Text("IBot", style: TextStyle(fontSize: 20)),
+                            Text("Tu asistente virtual, ¿en que puedo ayudarte?", style: TextStyle(fontSize: 15))
                           ],
                         ),
                       ),
                     )
                   ],
                 ),
+                SizedBox(height: 20,),
                 Row(
                   children: [
                     Expanded(
@@ -52,9 +53,9 @@ class OrganizaViajesScreen extends StatelessWidget {
                         elevation: 10,
                         child: Column(
                           children: [
-                            Icon(Icons.hotel),
-                            Text("Hoteles"),
-                            Text("Encuentra la mejor opcion y descansa")
+                            Icon(Icons.hotel, size: 50,),
+                            Text("Hoteles", style: TextStyle(fontSize: 20),),
+                            Text("Encuentra la mejor opcion y descansa", style: TextStyle(fontSize: 15),)
                           ],
                         ),
                       ),
@@ -64,14 +65,15 @@ class OrganizaViajesScreen extends StatelessWidget {
                         elevation: 10,
                         child: Column(
                           children: [
-                            Icon(Icons.car_crash),
-                            Text("Coches"),
-                            Text("Desplazate con total libertad")
+                            Icon(Icons.car_crash, size: 50,),
+                            Text("Coches", style: TextStyle(fontSize: 20),),
+                            Text("Desplazate con total libertad", style: TextStyle(fontSize: 15),)
                           ],
                         ),
                       ),
                     ),
                 ]),
+                SizedBox(height: 20,),
                     Row(
                   children: [
                     Expanded(
@@ -79,9 +81,9 @@ class OrganizaViajesScreen extends StatelessWidget {
                         elevation: 10,
                         child: Column(
                           children: [
-                            Icon(Icons.card_membership_outlined),
-                            Text("Tarjetas de embarque"),
-                            Text("Todas tus tarjetas en un solo lugar")
+                            Icon(Icons.card_membership_outlined, size: 50,),
+                            Text("Tarjetas de embarque", style: TextStyle(fontSize: 20),),
+                            Text("Todas tus tarjetas en un solo lugar", style: TextStyle(fontSize: 15),)
                           ],
                         ),
                       ),
@@ -91,9 +93,9 @@ class OrganizaViajesScreen extends StatelessWidget {
                         elevation: 10,
                         child: Column(
                           children: [
-                            Icon(Icons.request_page_sharp),
-                            Text("BoB"),
-                            Text("Recogida de equipaje a domicilio")
+                            Icon(Icons.request_page_sharp, size: 50,),
+                            Text("BoB", style: TextStyle(fontSize: 20),),
+                            Text("Recogida de equipaje a domicilio", style: TextStyle(fontSize: 15),)
                           ],
                         ),
                       ),

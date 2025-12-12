@@ -42,14 +42,11 @@ class AppTheme {
           floatingLabelStyle: TextStyle( color: primary ),
           enabledBorder: OutlineInputBorder( //por defecto
             borderSide: BorderSide( color: const Color.fromARGB(255, 33, 65, 153) ),
-            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(0), topRight: Radius.circular(0)),
           ),
           focusedBorder: OutlineInputBorder( //cuando pulsamos
             borderSide: BorderSide( color: primary ),
-            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15), topRight: Radius.circular(15)),
           ),
           border: OutlineInputBorder( //por defecto (no se la difrencia)
-            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(150), topRight: Radius.circular(150)),
           ),
         )
   );
