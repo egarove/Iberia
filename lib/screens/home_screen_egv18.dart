@@ -19,12 +19,20 @@ class _HomeScreenState extends State<HomeScreen> {
           color: Colors.red,
           child: Center(
              child: Column(children: [
-              Image(image: AssetImage("assets/logo_grande.png"), width: 200),
+              Padding(
+                padding: const EdgeInsets.only(top: 50.0),
+                child: Image(image: AssetImage("assets/logo_grande.png"), width: 200),
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Hola, te damos la bienvenida a  Iberia", style: TextStyle(fontSize: 30, color: Colors.white),),
+                child: Column(
+                  children: [
+                    Text("Hola, te damos la", style: TextStyle(fontSize: 30, color: Colors.white),),
+                    Text("bienvenida a Iberia", style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),)
+                  ],
+                ),
               ),
-              SizedBox(height: 50,),
+              SizedBox(height: 30,),
               Text("Inicia Sesion", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
               Container(
                 width: 400,

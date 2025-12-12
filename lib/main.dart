@@ -13,11 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      scrollBehavior: const MaterialScrollBehavior().copyWith( //para poder desplazar pinchando con el raton en windows
-        dragDevices: {
-          PointerDeviceKind.mouse,
-        }
-      ),
+      
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       //home: Listview2Screen(),
